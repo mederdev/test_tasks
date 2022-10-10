@@ -32,7 +32,6 @@ const linkedList = {
 	},
 };
 
-
 const showList = (list) => {
 	if (list == null) {
 		return;

@@ -16,7 +16,6 @@ const fibonacciCombination = (target) => {
 	}
 }
 
-
 const fibonacci = (value) => {
 	if (value <= 1) {
 		return value;
@@ -25,6 +24,5 @@ const fibonacci = (value) => {
 		return fibonacci(value - 1) + fibonacci(value - 2);
 	}
 }
-
 
 console.log(fibonacciCombination(714));
