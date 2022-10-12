@@ -45,28 +45,28 @@ class MainClass {
 	}
 
 	getStep(id) {
-		return this.allSteps.steps.find(item=>item.id===id)||null;
+		return this.allSteps.steps.find(item => item.id === id) || null;
 	}
 	getNextStep(id) {
-		const result=this.allSteps.steps.find(item=>item.id===id);
+		const result = this.allSteps.steps.find(item => item.id === id);
 		return this.getStep(result.ref);
 	}
 	getPrevStep(id) {
-		return this.allSteps.steps.find(item=>item.ref===id)||null;
+		return this.allSteps.steps.find(item => item.ref === id) || null;
 	}
 	getSteps() {
-		return this.allSteps.steps.map(element=>element.id);
+		return this.allSteps.steps.map(element => element.id);
 	}
 	checkAudio(id) {
-		const result=this.getStep(id);
-		return result.options!==null && result.options.audio!==null?true:false;
+		const result = this.getStep(id);
+		return result.options !== null && result.options.audio !== null ? true : false;
 	}
 }
 
 const mdl = new MainClass(flowData);
 
-console.log(mdl.getSteps());
-console.log(mdl.getNextStep())
-console.log(mdl.getPrevStep())
+console.log(mdl.getStep('810893a6-6930-476e-70d6-cf68a731044a'));
+console.log(mdl.getNextStep('8e9893a6-6930-476e-80d6-cf68a731044a'))
+console.log(mdl.getPrevStep('810893a6-6930-476e-70d6-cf68a731044a'))
 console.log(mdl.getSteps())
-console.log(mdl.checkAudio())
+console.log(mdl.checkAudio('810893a6-6930-476e-70d6-cf68a731044a'))
