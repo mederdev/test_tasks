@@ -2,6 +2,7 @@
 //Start time 17:29
 //End time 17:36
 
+
 const linkedList = {
 	value: 5,
 	next: {
@@ -30,7 +31,6 @@ const linkedList = {
 		},
 	},
 };
-
 
 const showList = (list) => {
 	if (list == null) {
